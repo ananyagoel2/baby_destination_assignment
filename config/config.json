@@ -1,0 +1,6 @@
+{
+  "host": "test-db2.postgres.database.azure.com",
+  "user":"ananya@test-db2",
+  "password":"Password@123",
+  "database":"test"
+}
