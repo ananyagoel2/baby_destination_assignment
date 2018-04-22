@@ -1,0 +1,160 @@
+{
+	"info": {
+		"name": "bd_test",
+		"_postman_id": "bd3c7c4e-1527-ae6b-bcea-51689e1d4bac",
+		"description": "basic api for test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "full_name",
+							"value": "ananya goel",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "abcd2@g.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password2",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://13.71.16.183:3000/users/register",
+					"protocol": "http",
+					"host": [
+						"13",
+						"71",
+						"16",
+						"183"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"register"
+					]
+				},
+				"description": "register unique user with validation"
+			},
+			"response": []
+		},
+		{
+			"name": "Update profile with token",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozLCJmdWxsX25hbWUiOiJhYmNkd3ciLCJpYXQiOjE1MjQzNDM2MDUsImV4cCI6MTUyNDM0NDIwNX0.V53TcNfBiMamNznMoeCf1-T8UWwWkI2Mar0awm7PmyI",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "full_name",
+							"value": "user 22",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://13.71.16.183:3000/users/profile",
+					"protocol": "http",
+					"host": [
+						"13",
+						"71",
+						"16",
+						"183"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"profile"
+					]
+				},
+				"description": "add token in header or url along with the full name to update value"
+			},
+			"response": []
+		},
+		{
+			"name": "Log in ",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "full_name",
+							"value": "ananya goel",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "222@g.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password2",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://13.71.16.183:3000/users/log",
+					"protocol": "http",
+					"host": [
+						"13",
+						"71",
+						"16",
+						"183"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"log"
+					]
+				},
+				"description": "the request responds with token jwt and 10 m expiration time"
+			},
+			"response": []
+		}
+	]
+}
